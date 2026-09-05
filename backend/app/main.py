@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.routes.claims import router as claims_router
 from app.routes.stats import router as stats_router
-
+from app.routes.anomalies import router as anomalies_router
 
 app = FastAPI(
     title="FRA Monitoring System API",
@@ -36,7 +36,7 @@ app.add_middleware(
 
 app.include_router(claims_router)
 app.include_router(stats_router)
-
+app.include_router(anomalies_router)
 
 # --------------------------------------------------
 # Basic routes

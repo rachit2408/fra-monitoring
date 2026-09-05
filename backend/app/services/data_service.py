@@ -31,6 +31,7 @@ for column in date_columns:
         )
 
 
+
 def get_dataframe():
     """Return the complete claims dataframe."""
     return df
